@@ -7,9 +7,7 @@ const useNewPostStyles = makeStyles(theme => ({
         width: '90%'
     },
     textField: {
-        backgroundColor: 'inherit',
-        margin: theme.spacing(1),
-        width: '100%'
+        margin: theme.spacing(1)
     },
     dense: {
         marginTop: 20
@@ -23,6 +21,10 @@ const useNewPostStyles = makeStyles(theme => ({
         width: theme.spacing(20),
         height: theme.spacing(5),
         marginTop: theme.spacing(3)
+    },
+    category: {
+        width: '50%',
+        margin: theme.spacing(1)
     }
 }));
 

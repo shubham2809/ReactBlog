@@ -12,13 +12,26 @@ import * as actionTypes from '../../actions/actionTypes';
 import useNewPostForm from '../../hooks/useNewPostForm';
 import { DispatchContext } from '../../contexts/blog.context';
 import useNewPostStyles from './NewPost.style';
+import useSnackBar from '../../hooks/useSnackBar';
+import SnackBar from '../../components/SnackBar/SnackBar';
 
-export default function NewPost() {
+export default function NewPost(props) {
     const classes = useNewPostStyles();
 
     const dispatch = useContext(DispatchContext);
 
     const { handleChange, reset, input } = useNewPostForm();
+    const [open, onDelete, handleClose] = useSnackBar();
+
+    const submitPostHandler = () => {
+        // Calling SnackBar Delete Function
+        onDelete();
+
+        // Taking user back to home page after showing snackbar
+        setTimeout(() => {
+            props.history.push('/posts');
+        }, 2000);
+    };
 
     const submitForm = e => {
         e.preventDefault();
@@ -33,6 +46,7 @@ export default function NewPost() {
         // we can also use async await and axios, to submit the data over http end point
         dispatch({ type: actionTypes.ADD, payload: data });
         reset();
+        submitPostHandler();
     };
 
     return (
@@ -67,7 +81,7 @@ export default function NewPost() {
                         select
                         name="category"
                         label="Select Category"
-                        className={classes.textField}
+                        className={classes.category}
                         onChange={handleChange}
                         value={input.category}
                         margin="normal"
@@ -89,6 +103,12 @@ export default function NewPost() {
                         Submit
                     </Button>
                 </ListItem>
+                <SnackBar
+                    variant="success"
+                    open={open}
+                    handleClose={handleClose}
+                    message="Post Added"
+                />
             </Paper>
         </form>
     );

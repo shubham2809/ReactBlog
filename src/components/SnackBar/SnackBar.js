@@ -11,10 +11,13 @@ const useStyles = makeStyles(theme => ({
     },
     warning: {
         backgroundColor: '#FFA000'
+    },
+    success: {
+        backgroundColor: '#22bb33'
     }
 }));
 
-export default function SnackBar({ open, handleClose, variant }) {
+export default function SnackBar({ open, handleClose, variant, message }) {
     const classes = useStyles();
 
     return (
@@ -30,7 +33,7 @@ export default function SnackBar({ open, handleClose, variant }) {
             >
                 <SnackbarContent
                     className={classes[variant]}
-                    message={<span>Post Deleted!!</span>}
+                    message={<span>{message}</span>}
                     action={[
                         <IconButton
                             key="close"

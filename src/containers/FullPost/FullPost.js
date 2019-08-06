@@ -13,6 +13,7 @@ export default function FullPost(props) {
     const postsState = useContext(PostsContext);
     const dispatch = useContext(DispatchContext);
 
+    // using custom snackbar hook - resuable component
     const [open, onDelete, handleClose] = useSnackBar();
 
     // we can easily get it from props.postsState as well
@@ -73,6 +74,7 @@ export default function FullPost(props) {
                         variant="warning"
                         open={open}
                         handleClose={handleClose}
+                        message="Post Deleted"
                     />
                 </Paper>
             </div>
