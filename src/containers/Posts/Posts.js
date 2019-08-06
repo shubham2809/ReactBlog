@@ -24,7 +24,10 @@ export default function Posts() {
     // Filter by SearchValue
     if (searchValue) {
         filteredPosts = posts.filter(post => {
-            if (post.content.indexOf(searchValue) > -1) {
+            if (
+                post.content.toLowerCase().indexOf(searchValue.toLowerCase()) >
+                -1
+            ) {
                 return true;
             }
             return false;

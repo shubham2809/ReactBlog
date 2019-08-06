@@ -5,6 +5,9 @@ import { BlogPostProvider } from './contexts/blog.context';
 
 export default function App() {
     return (
+        /* Provider React component that
+         will allows child components to
+         subscribe to context changes. */
         <BlogPostProvider>
             <BrowserRouter>
                 <Blog />

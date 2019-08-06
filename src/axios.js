@@ -1,3 +1,5 @@
+// Not in use anymore, left it here for historic reasons
+
 import axios from 'axios';
 
 const instance = axios.create({
