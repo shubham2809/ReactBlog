@@ -1,0 +1,8 @@
+export const INIT = 'INIT';
+export const ADD = 'ADD';
+export const DELETE = 'DELETE';
+export const SET_SELECTED_POST = 'SET_SELECTED_POST';
+export const SET_SELECT_CATEGORY = 'SET_SELECT_CATEGORY';
+export const CLEAR_SELECT_CATEGORY = 'CLEAR_SELECT_CATEGORY';
+export const SET_SEARCH_VALUE = 'SET_SEARCH_VALUE';
+export const CLEAR_SEARCH_VALUE = 'CLEAR_SEARCH_VALUE';
