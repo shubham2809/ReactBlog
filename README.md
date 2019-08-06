@@ -7,6 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - The project effectively uses the latest feature of React like [Hooks](https://reactjs.org/docs/hooks-intro.html)  ( which introduces a new and performance efficient way to manage state ) and [memo](https://reactjs.org/docs/react-api.html#reactmemo) to optimize performance.
   - Redux like functionility is achieved through [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 
+### What's New
+
+Toggle Dark Mode!!!
 
 ### Tech
 
