@@ -56,13 +56,6 @@ The Poject is well dividedin `components` , `container`, `hooks`, `contexts` and
       └── blogPost.reducer.js
 ```
 
-For production environments...
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
-
 ### State
 
 The initial application is passed down all child components from context `./contexts/blog.context.js`
