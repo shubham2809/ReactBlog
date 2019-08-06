@@ -5,7 +5,6 @@ const usePostStyles = makeStyles(theme => ({
         width: theme.spacing(50),
         maxWidth: theme.spacing(70),
         margin: theme.spacing(1),
-        boxShadow: '0 2px 3px #ccc',
         [theme.breakpoints.down('sm')]: {
             width: theme.spacing(40)
         }

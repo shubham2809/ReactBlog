@@ -11,23 +11,26 @@ const defaultPosts = {
         {
             id: 1,
             title: 'Best Place to Visit in Cyprus',
-            content: 'Details...',
+            content:
+                'Cyprus is at the crossroads between Europe and Northern Africa, and is easily accessible in the eastern Mediterranean from any of these three regions. The island nation is known for its beautiful beaches, regional wines, rugged mountainous interior, and the coastal city of Paphos - archaeological sites related to Aphrodite.',
             category: 'Travel',
-            date: '12/09/2015'
+            date: 'Aug 3rd 2019'
         },
         {
             id: 2,
-            title: 'How to use REACT HOOKS',
-            content: 'Details...',
+            title: 'REACT HOOKS',
+            content:
+                'Hooks don’t replace your knowledge of React concepts. Instead, Hooks provide a more direct API to the React concepts you already know: props, state, context, refs, and lifecycle. As we will show later, Hooks also offer a new powerful way to combine them.',
             category: 'Technology',
-            date: '12/09/2016'
+            date: 'Aug 4th 2019'
         },
         {
             id: 3,
             title: 'useReducer vs Redux',
-            content: 'Details...',
+            content:
+                'Where your state is managed is a crucial difference between Redux and useReducer. While Redux creates one global state container – which hangs somewhere above your whole application –, useReducer creates a independent component co-located state container within your component.',
             category: 'Technology',
-            date: '12/09/2017'
+            date: 'Aug 5th 2019'
         }
     ]
 };
