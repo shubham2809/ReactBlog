@@ -1,68 +1,96 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# The App
 
-### `npm start`
+  - A simple blog app with ability and search, add and filter blog posts.
+  - The project effectively uses the latest feature of React like [Hooks](https://reactjs.org/docs/hooks-intro.html)  ( which introduces a new and performance efficient way to manage state ) and [memo](https://reactjs.org/docs/react-api.html#reactmemo) to optimize performance.
+  - Redux like functionility is achieved through [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### What's New
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Toggle Dark Mode!!!
 
-### `npm test`
+### Tech
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It uses a number of open source projects to work properly:
 
-### `npm run build`
+* [React.js](https://reactjs.org/) - HTML enhanced for web apps!
+* [Material-UI](https://material-ui.com/) - great UI boilerplate for modern web apps
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Poject is well dividedin `components` , `container`, `hooks`, `contexts` and `reducer`.
 
-### `npm run eject`
+```sh
+/Users/shubhamd/Desktop/blog
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+|  ├── favicon.ico
+|  ├── index.html
+|  └── manifest.json
+└── src
+   ├── App.js
+   ├── actions
+   |  └── actionTypes.js
+   ├── axios.js
+   ├── components
+   |  ├── Post
+   |  └── SnackBar
+   ├── constants
+   |  └── constants.js
+   ├── containers
+   |  ├── Blog
+   |  ├── Drawer
+   |  ├── FullPost
+   |  ├── NewPost
+   |  └── Posts
+   ├── contexts
+   |  └── blog.context.js
+   ├── hooks
+   |  ├── useNewPostForm.js
+   |  ├── usePostsReducer.js
+   |  └── useSnackBar.js
+   ├── index.js
+   └── reducers
+      └── blogPost.reducer.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### State
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The initial application is passed down all child components from context `./contexts/blog.context.js`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| state | description |
+| ------ | ------ |
+| posts | Array of posts that is rendered |
+| categoryName | category name which posts should be filtered|
+| searchValue | Search Value to search content of posts |
+| selectedPost | Full post to see the details |
+| error | Any erros caused by side-effect |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Custom Hooks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`useNewPostForm` : Gives ability to created controlled forms.
 
-### Code Splitting
+`usePostReducer`: Gives us ability to store post data in localStorage (causing side-effect).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+`useSnackBar` : Easily reuse snackbar component anywhere in the project.
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Scripts
 
-### Making a Progressive Web App
+Start:
+```sh
+npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Build:
+```sh
+npm run build
+```
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
