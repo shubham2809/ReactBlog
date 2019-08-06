@@ -72,9 +72,12 @@ The initial application is passed down all child components from context `./cont
 ### Custom Hooks
 
 
-`useNewPostForm` : Gives ability to created controlled forms
-`usePostReducer`: Gives us ability to store post data in localStorage (causing side-effect)
+`useNewPostForm` : Gives ability to created controlled forms.
+
+`usePostReducer`: Gives us ability to store post data in localStorage (causing side-effect).
+
 `useSnackBar` : Easily reuse snackbar component anywhere in the project.
+
 
 ### Scripts
 
