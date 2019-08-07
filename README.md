@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # The App
 
-  - A simple blog app with ability and search, add and filter blog posts.
+  - A simple blog app with ability to search, add and filter blog posts.
   - The project effectively uses the latest feature of React like [Hooks](https://reactjs.org/docs/hooks-intro.html)  ( which introduces a new and performance efficient way to manage state ) and [memo](https://reactjs.org/docs/react-api.html#reactmemo) to optimize performance.
   - Redux like functionility is achieved through [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 
@@ -21,7 +21,7 @@ It uses a number of open source projects to work properly:
 
 ### Project Structure
 
-The Poject is well dividedin `components` , `container`, `hooks`, `contexts` and `reducer`.
+The Poject is well structured `components` , `container`, `hooks`, `contexts` and `reducer`.
 
 ```sh
 /Users/shubhamd/Desktop/blog
